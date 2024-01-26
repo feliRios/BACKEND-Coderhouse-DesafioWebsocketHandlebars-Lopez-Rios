@@ -1,0 +1,18 @@
+{
+  "type": "module",
+  "name": "desafio_entregable_4",
+  "version": "1.0.0",
+  "description": "Desafio Websocket + Handlebars",
+  "main": "./src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon main.js"
+  },
+  "author": "Felipe Lopez Rios",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2",
+    "socket.io": "^4.7.4"
+  }
+}
