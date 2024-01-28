@@ -81,7 +81,7 @@ class ProductManager {
 
               await writeFile(this.path, this.products);
               
-              return true; 
+              return product.id; 
               
             } else {
               return `Error: ya existe un producto con el codigo ${objectProd.code}`;

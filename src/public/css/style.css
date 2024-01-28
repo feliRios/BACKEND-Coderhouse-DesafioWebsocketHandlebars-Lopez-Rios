@@ -1,0 +1,23 @@
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  transform: translateY(25px);
+}
+
+.container {
+  background-color: #d3d3d3;
+  flex-basis: 150px;
+  padding: 15px;
+  border-radius: 10px;
+  min-height: 280px;
+}
+
+.container h3, .container span {
+  text-align: center;
+  display: block;
+}

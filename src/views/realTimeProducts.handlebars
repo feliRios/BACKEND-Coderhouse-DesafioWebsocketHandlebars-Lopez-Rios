@@ -1,0 +1,71 @@
+<div class="forms">
+  <form onsubmit="return addProduct()" class="forms__create-form">
+    <div class="create-form__section">
+      <label for="producttitle">Titulo</label>
+      <input type="text" name="producttitle" id="producttitle" placeholder="Titulo">
+    </div>
+    <div class="create-form__section">
+      <label for="productdesc">Descripcion</label>
+      <input type="text" name="productdesc" id="productdesc" placeholder="Descripcion">
+    </div>
+    <div class="create-form__section">
+      <label for="productprice">Precio</label>
+      <input type="number" name="productprice" id="productprice" placeholder="Precio">
+    </div>
+    <div class="create-form__section">
+      <label for="productthumb">Imagenes</label>
+      <input type="text" name="productthumb" id="productthumb" placeholder="URL Imagenes">
+    </div>
+    <div class="create-form__section">
+      <label for="productthumb">Codigo</label>
+      <input type="text" name="productcode" id="productcode" placeholder="Codigo">
+    </div>
+    <div class="create-form__section">
+      <label for="productstock">Stock</label>
+      <input type="number" name="productstock" id="productstock" placeholder="Stock">
+    </div>
+    <div class="create-form__section">
+      <label for="productstock">Status</label>
+      <input type="text" name="productstatus" id="productstatus" placeholder="Estado">
+    </div>
+    <div class="create-form__section">
+      <label for="productcategory">Categoria</label>
+      <select name="productcategory" id="productcategory">
+        <option>Comida</option>
+        <option>Otro</option>
+      </select>
+    </div>
+    <input type="submit" value="Añadir">
+
+  </form>
+  <form action="" onsubmit="return deleteProduct()" class="forms__delete-form">
+    <div class="delete-form__section">
+      <label for="productid_delete">ID del producto</label>
+      <input type="number" name="productid_delete" id="productid_delete" placeholder="ID">
+    </div>
+    <input type="submit" value="Eliminar">
+  </form>
+</div>
+
+<div class="cards">
+  {{#each products}}
+    <article class="container" id="product-{{this.id}}">
+      <div class="header">
+        <h3>{{this.title}}</h3>
+        <span>ID: {{this.id}}</span>
+      </div>
+      <div class="body">
+        <p>Desc: <em>{{this.description}}</em></p>
+        <span>Precio: <em>{{this.price}}</em></span>
+        <span>Codigo: <em>{{this.code}}</em></span>
+      </div>
+      <div class="footer">
+        <span>Stock: {{this.stock}}</span>
+        <p>Categoria: <em>{{this.category}}</em></p>
+      </div>
+    </article>
+  {{/each}}
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/index.js"></script>
