@@ -21,3 +21,15 @@
   text-align: center;
   display: block;
 }
+
+.forms {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+form {
+  background-color: antiquewhite;
+  padding: 25px;
+}
